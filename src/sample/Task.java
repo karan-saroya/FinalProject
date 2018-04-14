@@ -15,7 +15,7 @@ public class Task {
         this.endDate = endDate;
         this.projID =  projectID;
     }
-    String getName()
+    public String getName()
     {
         return this.name;
     }
