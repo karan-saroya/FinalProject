@@ -6,12 +6,14 @@ public class Task {
     String name;
     int taskID;
     Date startDate, endDate;
-    public Task(String name, int taskID, Date startDate, Date endDate)
+    int projID;
+    public Task(String name, int taskID, Date startDate, Date endDate, int projectID)
     {
         this.name = name;
         this.taskID = taskID;
         this.startDate = startDate;
         this.endDate = endDate;
+        this.projID =  projectID;
     }
     String getName()
     {

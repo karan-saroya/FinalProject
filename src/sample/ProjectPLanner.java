@@ -7,10 +7,10 @@ import java.util.Date;
 public class ProjectPLanner {
     Task[] formulateTasks(Project proj)
     {
-        Task[] tasks = {new Task("Requirement Specification", 1, new Date(), new Date()),
-                        new Task("Design Specification", 1, new Date(), new Date()),
-                        new Task("Implementation", 1, new Date(), new Date()),
-                        new Task("Testing", 1, new Date(), new Date())};
+        Task[] tasks = {new Task("Requirement Specification", 1, new Date(), new Date(),proj.projID),
+                        new Task("Design Specification", 1, new Date(), new Date(),proj.projID),
+                        new Task("Implementation", 1, new Date(), new Date(),proj.projID),
+                        new Task("Testing", 1, new Date(), new Date(),proj.projID)};
         return tasks;
     }
 
