@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="sample.DevScreen"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.devScreen">
+   <children>
+      <ListView fx:id="tasks_list" prefHeight="390.0" prefWidth="200.0" />
+      <Button layoutX="259.0" layoutY="183.0" mnemonicParsing="false" text="Record Progress" />
+      <Button layoutX="415.0" layoutY="182.0" mnemonicParsing="false" text="View FeedBack" />
+   </children>
 </AnchorPane>
