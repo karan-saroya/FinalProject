@@ -1,4 +1,21 @@
 package sample;
 
-public class NewProjScreen {
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+
+public class NewProjScreen extends Application
+{
+    public static Stage primStage;
+    @Override
+    public void start(Stage primaryStage) throws Exception
+    {
+        Parent root = FXMLLoader.load(getClass().getResource("newProjScreen.fxml"));
+        primaryStage.setTitle("New Project");
+        primaryStage.setScene(new Scene(root, 640, 480));
+        primaryStage.show();
+
+    }
 }
