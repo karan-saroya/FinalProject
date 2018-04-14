@@ -18,9 +18,11 @@ public class MgmtScreen  extends Application
         newProjScreen.start(primStage);
     }
     @FXML
-    private void viewPrev()
+    private void viewPrev() throws Exception
     {
-
+        ViewPrev viewPrev = new ViewPrev();
+        ViewPrev.primStage=primStage;
+        viewPrev.start(primStage);
     }
 
     @Override

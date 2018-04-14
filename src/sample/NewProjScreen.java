@@ -85,13 +85,67 @@ public class NewProjScreen extends Application implements Initializable
             preparedStmt.setDate   (3, new java.sql.Date(tlist[i].startDate.getTime()));
             preparedStmt.setDate(4, new java.sql.Date(tlist[i].startDate.getTime()));
             preparedStmt.setInt(5,Project.num_projects);
+            // execute the preparedstatement
+            preparedStmt.execute();
+        }
 
+        Project proj = new Project(Date.from(sdate.atStartOfDay(ZoneId.systemDefault()).toInstant()),Date.from(edate.atStartOfDay(ZoneId.systemDefault()).toInstant()),sample.Project.num_projects,tlist);
+
+        query = " insert into projects (start_date, end_date, id)"
+                + " values (?, ?, ?)";
+
+        // Insert Project into database
+
+            PreparedStatement preparedStmt = conn.prepareStatement(query);
+            preparedStmt.setDate (1,new java.sql.Date(proj.startDate.getTime()) );
+            preparedStmt.setDate (2, new java.sql.Date(proj.endDate.getTime()));
+            preparedStmt.setInt  (3, proj.projID);
+            // execute the preparedstatement
+            preparedStmt.execute();
+
+        query = " insert into resource (name, type, proj_id)"
+                + " values (?, ?, ?)";
+
+        // Insert Project into database
+        int num_developers = spinDevelop.getValue();
+        int num_testers = spinTester.getValue();
+        int num_designers = spinDesigner.getValue();
+        //Resource Id 0 Developer, 1 tester, 2 designer
+        for(int i=0;i<num_developers;i++)
+        {
+            preparedStmt = conn.prepareStatement(query);
+            preparedStmt.setString (1, "Developer "+(i+1));
+            preparedStmt.setInt (2, 0);
+
+            preparedStmt.setInt (3,proj.projID);
+            // execute the preparedstatement
+            preparedStmt.execute();
+        }
+        for(int i=0;i<num_testers;i++)
+        {
+            preparedStmt = conn.prepareStatement(query);
+            preparedStmt.setString (1, "Tester "+(i+1));
+            preparedStmt.setInt (2, 1);
+
+            preparedStmt.setInt (3,proj.projID);
+            // execute the preparedstatement
+            preparedStmt.execute();
+        }
+
+        for(int i=0;i<num_designers;i++)
+        {
+            preparedStmt = conn.prepareStatement(query);
+            preparedStmt.setString (1, "Designer "+(i+1));
+            preparedStmt.setInt (2, 2);
+
+            preparedStmt.setInt (3,proj.projID);
             // execute the preparedstatement
             preparedStmt.execute();
         }
         conn.close();
-
-        Project proj = new Project(Date.from(sdate.atStartOfDay(ZoneId.systemDefault()).toInstant()),Date.from(edate.atStartOfDay(ZoneId.systemDefault()).toInstant()),sample.Project.num_projects,tlist);
+        MgmtScreen mgmtScreen  = new MgmtScreen();
+        MgmtScreen.primStage = primStage;
+        mgmtScreen.start(primStage);
 
     }
     @Override

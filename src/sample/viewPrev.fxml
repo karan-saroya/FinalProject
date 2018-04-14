@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ViewPrev">
+   <children>
+      <SplitPane dividerPositions="0.29797979797979796" layoutX="152.0" layoutY="68.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <ListView fx:id="projList" layoutX="-25.0" layoutY="54.0" prefHeight="398.4" prefWidth="175.2" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="269.0" prefWidth="317.0">
+               <children>
+                  <Button fx:id="allocate_tasks" layoutX="65.0" layoutY="165.0" mnemonicParsing="false" onAction="#allocateTasks" prefHeight="52.0" prefWidth="96.0" text="Allocate Tasks" />
+                  <Button layoutX="209.0" layoutY="165.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="110.0" text="Get Cost Estimate" />
+               </children></AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
