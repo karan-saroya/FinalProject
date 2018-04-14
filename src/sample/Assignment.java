@@ -1,26 +1,27 @@
 package sample;
 
 public class Assignment {
-    Task task;
-    Resource resource;
-    Manager manager;
+    String task;
+    String resource;
+    int proj_id;
     double progress = 0;
 
-    public Assignment(Task task, Resource resource, Manager manager)
+    public Assignment(String task, String resource, int proj_id)
     {
         this.task = task;
         this.resource = resource;
-        this.manager = manager;
+        this.proj_id = proj_id;
     }
-    Resource getResource()
+    String getResource()
     {
         return  this.resource;
     }
-    Task getTask()
+    String getTask()
     {
         return  this.getTask();
     }
-    void setProgress(Double progress)
+    int getID(){return this.proj_id;};
+    void setProgress(double progress)
     {
         this.progress = progress;
     }

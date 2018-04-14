@@ -55,7 +55,13 @@ public class ViewPrev extends Application implements Initializable
         primaryStage.setScene(new Scene(root, 640, 480));
         primaryStage.show();
     }
-
+    public void getAssignments() throws Exception
+    {
+        GetAssign.proj_id = Integer.parseInt(projList.getSelectionModel().getSelectedItem().split(" ")[1]);
+        GetAssign getAssign = new GetAssign();
+        GetAssign.prim_stage= primStage;
+        getAssign.start(primStage);
+    }
     @Override
     public void initialize(URL location, ResourceBundle resources)
     {

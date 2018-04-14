@@ -18,6 +18,7 @@
                <children>
                   <Button fx:id="allocate_tasks" layoutX="65.0" layoutY="165.0" mnemonicParsing="false" onAction="#allocateTasks" prefHeight="52.0" prefWidth="96.0" text="Allocate Tasks" />
                   <Button layoutX="209.0" layoutY="165.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="110.0" text="Get Cost Estimate" />
+                  <Button fx:id="getAssgBtn" layoutX="134.0" layoutY="256.0" mnemonicParsing="false" onAction="#getAssignments" prefHeight="52.0" prefWidth="110.0" text="Get Assignments" />
                </children></AnchorPane>
         </items>
       </SplitPane>

@@ -1,6 +1,8 @@
 package sample;
 
 import javafx.application.Application;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
@@ -9,10 +11,7 @@ import javafx.scene.control.ListView;
 import javafx.stage.Stage;
 
 import java.net.URL;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
@@ -39,6 +38,35 @@ public class AllocateTasks extends Application implements Initializable
         ResultSet rs = stmt.executeQuery("select name from resource where proj_id ="+proj_id);
         while(rs.next())
             resList.add(rs.getString(1));
+
+
+         stmt  = conn.createStatement();
+        rs = stmt.executeQuery("select name from tasks where proj_id ="+proj_id);
+        while(rs.next())
+            tasksList.add(rs.getString(1));
+
+
+        conn.close();
+
+    }
+    public void createAssignment() throws Exception
+    {
+        Assignment assg = new Assignment(task_list.getSelectionModel().getSelectedItem(),res_list.getSelectionModel().getSelectedItem(),proj_id);
+
+        Connection conn  = DriverManager.getConnection("jdbc:mysql://localhost:3306/project?useSSL=false","root","karan");
+
+        String query = " insert into assignments "
+                + " values (?, ?, ?,?)";
+
+        // Insert Project into database
+
+        PreparedStatement preparedStmt = conn.prepareStatement(query);
+        preparedStmt.setString (1,assg.task );
+        preparedStmt.setString (2, assg.resource);
+        preparedStmt.setInt  (3, assg.proj_id);
+        preparedStmt.setFloat(4,0);
+        // execute the preparedstatement
+        preparedStmt.execute();
         conn.close();
 
     }
@@ -56,6 +84,15 @@ public class AllocateTasks extends Application implements Initializable
     @Override
     public void initialize(URL location, ResourceBundle resources)
     {
+
+        ObservableList<String> res = FXCollections.observableArrayList(resList);
+        res_list.setItems(res);
+
+        ObservableList<String> task = FXCollections.observableArrayList(tasksList);
+        task_list.setItems(task);
+
+
+
 
     }
 }
