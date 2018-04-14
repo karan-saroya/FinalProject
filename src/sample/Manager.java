@@ -4,7 +4,7 @@ public class Manager {
     int empID;
     String empName;
     int priorityLevel;
-    int cost;
+    int cost = 0;
     public Manager(int empID, String empName, int priorityLevel, int cost)
     {
         this.empID = empID;
