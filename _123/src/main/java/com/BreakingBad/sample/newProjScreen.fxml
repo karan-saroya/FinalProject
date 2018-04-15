@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" stylesheets="@/style.css" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="561.0" prefWidth="888.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.NewProjScreen">
+   <children>
+      <AnchorPane prefHeight="408.0" prefWidth="600.0">
+         <children>
+            <TextField fx:id="taskList" layoutX="580.0" layoutY="253.0" prefHeight="44.0" prefWidth="218.0" />
+            <DatePicker fx:id="startDate" layoutX="162.0" layoutY="79.0" prefHeight="44.0" prefWidth="218.0" />
+            <DatePicker fx:id="endDate" layoutX="580.0" layoutY="79.0" prefHeight="44.0" prefWidth="218.0" />
+            <Label layoutX="40.0" layoutY="84.0" text="Start">
+               <font>
+                  <Font size="24.0" />
+               </font></Label>
+            <Label layoutX="447.0" layoutY="84.0" text="End">
+               <font>
+                  <Font size="24.0" />
+               </font></Label>
+            <Label layoutX="36.0" layoutY="178.0" text="Developer">
+               <font>
+                  <Font size="24.0" />
+               </font></Label>
+            <Spinner fx:id="spinDevelop" layoutX="171.0" layoutY="165.0" prefHeight="44.0" prefWidth="209.0" />
+            <Label layoutX="447.0" layoutY="178.0" text="Tester">
+               <font>
+                  <Font size="24.0" />
+               </font></Label>
+            <Spinner fx:id="spinTester" layoutX="580.0" layoutY="167.0" prefHeight="44.0" prefWidth="218.0" />
+            <Label layoutX="43.0" layoutY="248.0" text="Designer">
+               <font>
+                  <Font size="24.0" />
+               </font></Label>
+            <Spinner fx:id="spinDesigner" layoutX="171.0" layoutY="243.0" prefHeight="44.0" prefWidth="209.0" />
+            <Label layoutX="451.0" layoutY="258.0" text="Tasks">
+               <font>
+                  <Font size="24.0" />
+               </font></Label>
+            <Button id="createproject" layoutX="376.0" layoutY="351.0" mnemonicParsing="false" onAction="#createProject" prefHeight="51.0" prefWidth="209.0" text="Create Project" textFill="#f5f4f4">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>
