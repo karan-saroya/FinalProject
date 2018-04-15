@@ -1,4 +1,5 @@
-package sample;
+package com.BreakingBad.sample;
+
 
 public class Deliverable {
     Assignment[] assgs;

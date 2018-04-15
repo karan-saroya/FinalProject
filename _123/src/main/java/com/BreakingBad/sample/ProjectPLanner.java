@@ -1,4 +1,6 @@
-package sample;
+package com.BreakingBad.sample;
+
+
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;

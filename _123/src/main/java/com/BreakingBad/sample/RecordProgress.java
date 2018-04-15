@@ -1,4 +1,6 @@
-package sample;
+package com.BreakingBad.sample;
+
+
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -20,7 +22,7 @@ public class RecordProgress extends Application implements Initializable
     @Override
     public void start(Stage primaryStage) throws Exception
     {
-        Parent root = FXMLLoader.load(getClass().getResource("recordProgress.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/fxml/recordProgress.fxml"));
 
         primaryStage.setTitle("Record Progress");
 

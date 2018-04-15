@@ -1,4 +1,6 @@
-package sample;
+package com.BreakingBad.sample;
+
+
 
 import javafx.application.Application;
 import javafx.fxml.FXML;
@@ -44,7 +46,7 @@ public class NewProjScreen extends Application implements Initializable
     public void start(Stage primaryStage) throws Exception
     {
 
-        Parent root = FXMLLoader.load(getClass().getResource("newProjScreen.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/fxml/newProjScreen.fxml"));
         primaryStage.setTitle("New Project");
         primaryStage.setScene(new Scene(root, 640, 480));
         primaryStage.show();
@@ -89,7 +91,7 @@ public class NewProjScreen extends Application implements Initializable
             preparedStmt.execute();
         }
 
-        Project proj = new Project(Date.from(sdate.atStartOfDay(ZoneId.systemDefault()).toInstant()),Date.from(edate.atStartOfDay(ZoneId.systemDefault()).toInstant()),sample.Project.num_projects,tlist);
+        Project proj = new Project(Date.from(sdate.atStartOfDay(ZoneId.systemDefault()).toInstant()),Date.from(edate.atStartOfDay(ZoneId.systemDefault()).toInstant()),Project.num_projects,tlist);
 
         query = " insert into projects (start_date, end_date, id)"
                 + " values (?, ?, ?)";

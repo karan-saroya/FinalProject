@@ -1,4 +1,6 @@
-package sample;
+package com.BreakingBad.sample;
+
+
 
 import javafx.application.Application;
 import javafx.fxml.FXML;
@@ -28,7 +30,7 @@ public class MgmtScreen  extends Application
     @Override
     public void start(Stage primaryStage) throws Exception
     {
-        Parent root = FXMLLoader.load(getClass().getResource("mgmtScreen.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/fxml/mgmtScreen.fxml"));
         primaryStage.setTitle("Management Screen");
         primaryStage.setScene(new Scene(root, 640, 480));
         primaryStage.show();

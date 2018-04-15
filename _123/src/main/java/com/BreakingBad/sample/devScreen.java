@@ -1,4 +1,6 @@
-package sample;
+package com.BreakingBad.sample;
+
+
 
 import javafx.application.Application;
 import javafx.collections.FXCollections;
@@ -50,7 +52,7 @@ public class devScreen extends Application implements Initializable
     public void start(Stage primaryStage) throws Exception
     {
 
-        Parent root = FXMLLoader.load(getClass().getResource("devScreen.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/fxml/devScreen.fxml"));
 
         primaryStage.setTitle("Developer Screen");
 

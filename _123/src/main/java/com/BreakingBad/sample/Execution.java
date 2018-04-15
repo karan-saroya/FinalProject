@@ -1,4 +1,6 @@
-package sample;
+package com.BreakingBad.sample;
+
+
 
 public class Execution {
     boolean recordProgress(Assignment assg, Double progress)

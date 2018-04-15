@@ -6,10 +6,10 @@
 <?import javafx.scene.layout.AnchorPane?>
 
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ExistProj">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.BreakingBad.sample.ExistProj">
    <children>
       <Spinner layoutX="215.0" layoutY="131.0" />
       <Label layoutX="115.0" layoutY="135.0" text="Project Name" />
-      <Button fx:id="viewRep" layoutX="238.0" layoutY="187.0" mnemonicParsing="false" onAction="#viewReport" text="View Report" />
+      <Button fx:id="viewRep" layoutX="238.0" layoutY="187.0" mnemonicParsing="false"  text="View Report" />
    </children>
 </AnchorPane>

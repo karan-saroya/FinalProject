@@ -1,4 +1,6 @@
-package sample;
+package com.BreakingBad.sample;
+
+
 
 import javafx.application.Application;
 import javafx.collections.FXCollections;

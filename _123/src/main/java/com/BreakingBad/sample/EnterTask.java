@@ -1,4 +1,4 @@
-package sample;
+package com.BreakingBad.sample;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -21,7 +21,7 @@ public class EnterTask extends Application implements Initializable
     @Override
     public void start(Stage primaryStage) throws Exception
     {
-        Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("fxml/sample.fxml"));
         primaryStage.setTitle("Enter Tasks");
         primaryStage.setScene(new Scene(root, 640, 480));
         primaryStage.show();

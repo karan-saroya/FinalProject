@@ -1,4 +1,4 @@
-package sample;
+package com.BreakingBad.sample;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;

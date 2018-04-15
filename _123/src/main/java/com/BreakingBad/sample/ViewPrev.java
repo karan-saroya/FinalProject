@@ -1,4 +1,6 @@
-package sample;
+package com.BreakingBad.sample;
+
+
 
 import javafx.application.Application;
 import javafx.collections.FXCollections;
@@ -50,7 +52,7 @@ public class ViewPrev extends Application implements Initializable
     }
     public void start(Stage primaryStage) throws Exception
     {
-        Parent root = FXMLLoader.load(getClass().getResource("viewPrev.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/fxml/viewPrev.fxml"));
         primaryStage.setTitle("View Project");
         primaryStage.setScene(new Scene(root, 640, 480));
         primaryStage.show();

@@ -1,4 +1,6 @@
-package sample;
+package com.BreakingBad.sample;
+
+
 
 import javafx.application.Application;
 import javafx.collections.FXCollections;
@@ -41,7 +43,7 @@ public class GetAssign extends Application implements Initializable
     @Override
     public void start(Stage primaryStage) throws Exception
     {
-        Parent root = FXMLLoader.load(getClass().getResource("getAssign.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/fxml/getAssign.fxml"));
         primaryStage.setTitle("Get Assignments");
         primaryStage.setScene(new Scene(root, 640, 480));
         primaryStage.show();

@@ -1,4 +1,6 @@
-package sample;
+package com.BreakingBad.sample;
+
+
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -12,10 +14,12 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
 
         Controller.primStage=primaryStage;
-        Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/fxml/sample.fxml"));
+
         primaryStage.setTitle("Login");
         primaryStage.setScene(new Scene(root, 640, 480));
         primaryStage.show();
+
     }
 
 
