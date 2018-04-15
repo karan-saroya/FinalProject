@@ -28,7 +28,7 @@
                     <appendAssemblyId>false</appendAssemblyId>
                     <archive>
                         <manifest>
-                            <mainClass>sample.Main</mainClass>
+                            <mainClass>com.BreakingBad.sample.Main</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>
