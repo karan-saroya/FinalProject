@@ -1,0 +1,12 @@
+.root{
+    -fx-background-color: red;
+}
+.imageview{
+    width: 50%;
+    -fx-background-color: green;
+
+}
+#button{
+    -fx-arc-width: 50%;
+    -fx-background-color: green;
+}

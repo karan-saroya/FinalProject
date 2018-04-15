@@ -1,0 +1,30 @@
+.root{
+    -fx-background-color: red;
+    -fx-background-image: url('backimage.jpg');
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover, auto;
+}
+.imageview{
+    width: 50%;
+    -fx-background-color: green;
+
+}
+#loginbtn:hover{
+    -fx-arc-width: 50%;
+    -fx-background-color: green;
+}
+#record,#viewfeedback,#viewreport,#view,#create,#assign,#createproject,#allocatetask,#getcost,#getssign{
+    -fx-background-color: #DC7633;
+}
+
+#record:hover,#viewfeedback:hover,#viewreport:hover,#view:hover,#create:hover,#assign:hover,#createproject:hover,#allocatetask:hover,getcost:hover,#getssign:hover{
+    -fx-background-color: #E59866;
+    box-shadow: 5px 10px;
+}
+#image1{
+    -fx-arc-width: 300px;
+}
+#startdate{
+    background-color: red ;
+    color: red ;
+}
